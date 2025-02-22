@@ -1,4 +1,5 @@
-﻿namespace BudzetDomowy
+﻿
+namespace BudzetDomowy
 {
     partial class Form1
     {
