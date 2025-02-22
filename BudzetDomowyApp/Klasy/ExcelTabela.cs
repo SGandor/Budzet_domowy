@@ -17,15 +17,14 @@ namespace BudzetDomowy
             worksheet.Cell(1, 4).Value = "Kategoria";
             worksheet.Cell(1, 5).Value = "Typ";
 
-            int row = 2;
-            foreach (var transakcja in transakcje)
+            for (int i = 0; i < transakcje.Count; i++)
             {
-                worksheet.Cell(row, 1).Value = transakcja.Data.ToString("yyyy-MM-dd");
-                worksheet.Cell(row, 2).Value = transakcja.Kwota;
-                worksheet.Cell(row, 3).Value = transakcja.Opis;
-                worksheet.Cell(row, 4).Value = transakcja.Kategoria;
-                worksheet.Cell(row, 5).Value = transakcja.Typ.ToString();
-                row++;
+                var transakcja = transakcje[i];
+                worksheet.Cell(i + 2, 1).Value = transakcja.Data.ToString("yyyy-MM-dd");
+                worksheet.Cell(i + 2, 2).Value = transakcja.Kwota;
+                worksheet.Cell(i + 2, 3).Value = transakcja.Opis;
+                worksheet.Cell(i + 2, 4).Value = transakcja.Kategoria;
+                worksheet.Cell(i + 2, 5).Value = transakcja.TypTransakcji.ToString();
             }
 
             workbook.SaveAs(filePath);
