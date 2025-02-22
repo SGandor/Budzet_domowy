@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudzetDomowyApp", "BudzetDomowyApp.csproj", "{1DFF76EA-A7B4-4074-8332-E7F234CC1563}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DFF76EA-A7B4-4074-8332-E7F234CC1563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFF76EA-A7B4-4074-8332-E7F234CC1563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFF76EA-A7B4-4074-8332-E7F234CC1563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFF76EA-A7B4-4074-8332-E7F234CC1563}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A17B2AA-ED62-4E6D-A7D8-11C080B60585}
+	EndGlobalSection
+EndGlobal
