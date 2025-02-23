@@ -36,6 +36,8 @@
             cmbKategoria = new ComboBox();
             dateTimePicker1 = new DateTimePicker();
             Dodaj_transakcje = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnEksport
@@ -102,11 +104,22 @@
             Dodaj_transakcje.UseVisualStyleBackColor = true;
             Dodaj_transakcje.Click += Dodaj_transakcje_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(342, 41);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(Dodaj_transakcje);
             Controls.Add(dateTimePicker1);
             Controls.Add(cmbKategoria);
@@ -118,6 +131,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,5 +147,6 @@
         private ComboBox cmbKategoria;
         private DateTimePicker dateTimePicker1;
         private Button Dodaj_transakcje;
+        private DataGridView dataGridView1;
     }
 }

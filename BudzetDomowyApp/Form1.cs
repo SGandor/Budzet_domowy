@@ -13,24 +13,6 @@ namespace BudzetDomowyApp
 
         private void btnEksport_Click(object sender, EventArgs e)
         {
-            budzet.DodajTransakcje(new Przychod
-            {
-                Data = DateTime.Now,
-                Kwota = 5000,
-                Nazwa = "Wyp³ata",
-                Opis = "Miesiêczna wyp³ata",
-                Kategoria = "Praca"
-            });
-
-            budzet.DodajTransakcje(new Wydatek
-            {
-                Data = DateTime.Now,
-                Kwota = 200,
-                Nazwa = "Zakupy",
-                Opis = "Codzienne zakupy",
-                Kategoria = "Jedzenie"
-            });
-
             ExcelTabela.EksportujDoExcel(budzet.Transakcje, "budzet.xlsx");
             MessageBox.Show("Dane zosta³y wyeksportowane do pliku 'budzet.xlsx'!");
         }
@@ -99,11 +81,18 @@ namespace BudzetDomowyApp
             }
         }
 
+        private DateTimePicker GetDateTimePicker1()
+        {
+            return dateTimePicker1;
+        }
+
         private void OdswiezListeTransakcji()
         {
-            dateTimePicker1.DataSource = null;
-            dateTimePicker1.DataSource = budzet.Transakcje;
+            dataGridView1.DataSource = null; // Resetowanie Ÿród³a danych
+            dataGridView1.DataSource = budzet.Transakcje; // Ustawienie nowego Ÿród³a danych
         }
+
+
 
         private void AktualizujStatystyki()
         {
@@ -112,5 +101,9 @@ namespace BudzetDomowyApp
             lblWydatki.Text = $"Wydatki: {budzet.SumaWydatkow()} z³";
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
