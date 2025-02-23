@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             btnEksport = new Button();
+            txtNazwa = new TextBox();
+            txtKwota = new TextBox();
+            txtOpis = new TextBox();
+            cmbTyp = new ComboBox();
+            cmbKategoria = new ComboBox();
+            dateTimePicker1 = new DateTimePicker();
+            Dodaj_transakcje = new Button();
             SuspendLayout();
             // 
             // btnEksport
@@ -41,20 +48,90 @@
             btnEksport.UseVisualStyleBackColor = true;
             btnEksport.Click += btnEksport_Click;
             // 
+            // txtNazwa
+            // 
+            txtNazwa.Location = new Point(12, 12);
+            txtNazwa.Name = "txtNazwa";
+            txtNazwa.Size = new Size(200, 23);
+            txtNazwa.TabIndex = 1;
+            // 
+            // txtKwota
+            // 
+            txtKwota.Location = new Point(12, 41);
+            txtKwota.Name = "txtKwota";
+            txtKwota.Size = new Size(200, 23);
+            txtKwota.TabIndex = 2;
+            // 
+            // txtOpis
+            // 
+            txtOpis.Location = new Point(12, 70);
+            txtOpis.Name = "txtOpis";
+            txtOpis.Size = new Size(200, 23);
+            txtOpis.TabIndex = 3;
+            // 
+            // cmbTyp
+            // 
+            cmbTyp.FormattingEnabled = true;
+            cmbTyp.Location = new Point(12, 99);
+            cmbTyp.Name = "cmbTyp";
+            cmbTyp.Size = new Size(200, 23);
+            cmbTyp.TabIndex = 4;
+            // 
+            // cmbKategoria
+            // 
+            cmbKategoria.FormattingEnabled = true;
+            cmbKategoria.Location = new Point(12, 128);
+            cmbKategoria.Name = "cmbKategoria";
+            cmbKategoria.Size = new Size(200, 23);
+            cmbKategoria.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(12, 157);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 6;
+            // 
+            // Dodaj_transakcje
+            // 
+            Dodaj_transakcje.Location = new Point(12, 186);
+            Dodaj_transakcje.Name = "Dodaj_transakcje";
+            Dodaj_transakcje.Size = new Size(200, 37);
+            Dodaj_transakcje.TabIndex = 7;
+            Dodaj_transakcje.Text = "Dodaj transakcję";
+            Dodaj_transakcje.UseVisualStyleBackColor = true;
+            Dodaj_transakcje.Click += Dodaj_transakcje_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Dodaj_transakcje);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(cmbKategoria);
+            Controls.Add(cmbTyp);
+            Controls.Add(txtOpis);
+            Controls.Add(txtKwota);
+            Controls.Add(txtNazwa);
             Controls.Add(btnEksport);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
 
         private Button btnEksport;
+        private TextBox txtNazwa;
+        private TextBox txtKwota;
+        private TextBox txtOpis;
+        private ComboBox cmbTyp;
+        private ComboBox cmbKategoria;
+        private DateTimePicker dateTimePicker1;
+        private Button Dodaj_transakcje;
     }
 }
