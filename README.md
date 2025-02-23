@@ -1,9 +1,13 @@
 # Budzet_domowy
 Praca zaliczeniowa na Ćwiczenia z Projektowania Obiektowego
 
-![image](https://github.com/user-attachments/assets/56519a68-efcc-404b-98de-04ba2a03da12)
+![image](https://github.com/user-attachments/assets/2a468caf-8424-4847-9477-3c817fac814e)
 
-##instrujcja pobrania:
+##Instrukcja pobrania:
+![image](https://github.com/user-attachments/assets/73181cd6-f535-4da7-9113-f97e4935ad36)
+Należy pobrać spakowany plik Budzet.domowy.-.aplikacja.rar znaleziony w sekcji releases opisany jako V1.0.
+Po pobraniu należy wypakować pliki do wybranego przez siebie folderu i uruchomić plik BudzetDomowyApp.exe
+Plik excel jest tworzony w głównym folderze aplikacji, opisany jako budzet.
 
 1.1. Cel aplikacji: Zarządzanie budżetem domowym.
 Funkcjonalności:
