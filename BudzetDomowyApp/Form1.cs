@@ -1,3 +1,6 @@
+using ClosedXML.Excel;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BudzetDomowyApp
@@ -120,5 +123,67 @@ namespace BudzetDomowyApp
         {
 
         }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Wybierz plik Excel do zaimportowania"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+                ImportujZExcel(filePath);  // Wywo³anie metody importu
+            }
+
+        }
+
+        private void ImportujZExcel(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Plik nie istnieje.");
+                return;
+            }
+
+            using (var workbook = new XLWorkbook(filePath))
+            {
+                var worksheet = workbook.Worksheet(1); // Pierwszy arkusz
+                var rows = worksheet.RangeUsed().RowsUsed().Skip(1); // Pomija nag³ówek
+
+                foreach (var row in rows)
+                {
+                    try
+                    {
+                        Transakcja transakcja;
+                        string typ = row.Cell(5).GetString();
+
+                        if (typ == "Przychód")
+                            transakcja = new Przychod();
+                        else
+                            transakcja = new Wydatek();
+
+                        transakcja.Data = row.Cell(1).GetDateTime();
+                        transakcja.Kwota = decimal.Parse(row.Cell(2).GetString());
+                        transakcja.Nazwa = row.Cell(3).GetString();
+                        transakcja.Opis = row.Cell(4).GetString();
+                        transakcja.Kategoria = row.Cell(6).GetString();
+
+                        budzet.DodajTransakcje(transakcja);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"B³¹d podczas importu: {ex.Message}");
+                    }
+                }
+            }
+
+            OdswiezListeTransakcji();
+            AktualizujStatystyki();
+            MessageBox.Show("Dane zosta³y zaimportowane!");
+        }
+
     }
 }

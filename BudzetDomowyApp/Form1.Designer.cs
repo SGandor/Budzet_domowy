@@ -46,6 +46,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            btnImport = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             btnEksport.Name = "btnEksport";
             btnEksport.Size = new Size(263, 80);
             btnEksport.TabIndex = 0;
-            btnEksport.Text = "Eksportuj do Excel";
+            btnEksport.Text = "Eksportuj dane do Excela";
             btnEksport.UseVisualStyleBackColor = true;
             btnEksport.Click += btnEksport_Click;
             // 
@@ -207,11 +208,22 @@
             label6.Text = "Data";
             label6.Click += label6_Click;
             // 
+            // btnImport
+            // 
+            btnImport.Location = new Point(12, 282);
+            btnImport.Name = "btnImport";
+            btnImport.Size = new Size(263, 80);
+            btnImport.TabIndex = 18;
+            btnImport.Text = "Importuj dane z Excela";
+            btnImport.UseVisualStyleBackColor = true;
+            btnImport.Click += btnImport_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnImport);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -259,5 +271,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button btnImport;
     }
 }
