@@ -3,13 +3,13 @@ Praca zaliczeniowa na Ćwiczenia z Projektowania Obiektowego
 
 ![image](https://github.com/user-attachments/assets/56519a68-efcc-404b-98de-04ba2a03da12)
 
+##instrujcja pobrania:
 
 1.1. Cel aplikacji: Zarządzanie budżetem domowym.
 Funkcjonalności:
 - Dodawanie, edycja i usuwanie transakcji.
 - Przeglądanie historii transakcji.
-- Eksport danych do pliku Excel (najlepiej w tabeli).
-- Planowanie comiesięcznych wydatków stałych.
+- Import i Eksport danych do tabeli w pliku Excel.
   
 1.2. Dane potrzebne dla każdej transakcji:
 - Data transakcji.
